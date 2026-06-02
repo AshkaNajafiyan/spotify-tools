@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# environment variables
+.env
+.env.local
+
+# logs
+*.log
+
+# macOS
+.DS_Store
+
+# build output
+dist/
+build/
+
+# vite
+personal-notes-frontend/dist/
+
+# coverage
+coverage/

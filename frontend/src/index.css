@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --spotify-green: #1DB954;
+  --spotify-dark: #121212;
+  --spotify-surface: #181818;
+  --spotify-muted: #b3b3b3;
+}
+body {
+  @apply bg-[var(--spotify-dark)] text-white font-sans;
+}
+
+/* Hide native date placeholder text parts in WebKit so our custom overlay is clean */
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: transparent;
+  opacity: 1; /* keep element visible for accessibility but hide text */
+}
+
+/* keep the calendar icon visible */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.95;
+}
+
+/* Firefox fallback - ensure placeholder-like text doesn't show through */
+input[type="date"] {
+  color-scheme: dark;
+}

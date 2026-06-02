@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" />
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Album Viewer</title>
+  </head>
+  <body class="bg-black text-white font-sans">
+    <div id="root" class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header class="bg-neutral-900 p-4 shadow-md flex items-center justify-between">
+        <h1 class="text-xl font-bold text-green-500">My Spotify App</h1>
+        <nav>
+          <ul class="flex gap-6 text-gray-300">
+            <li><a href="/" class="hover:text-green-400">Home</a></li>
+            <li><a href="/albums" class="hover:text-green-400">Albums</a></li>
+            <li><a href="/playlists" class="hover:text-green-400">Playlists</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6">
+        <h2 class="text-2xl font-semibold mb-6">Welcome!</h2>
+        <p class="text-gray-400 mb-4">Browse your saved albums and playlists.</p>
+
+        <!-- Example Album Card -->
+        <div class="bg-neutral-800 p-4 rounded-lg shadow hover:bg-neutral-700 transition w-60">
+          <img src="https://placehold.co/300x300" alt="Album cover" class="rounded mb-3" />
+          <h3 class="text-lg font-bold text-white">Album Name</h3>
+          <p class="text-gray-400">Artist Name • 2025</p>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-neutral-900 p-4 text-center text-gray-500 text-sm">
+        Built using Spotify API
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
